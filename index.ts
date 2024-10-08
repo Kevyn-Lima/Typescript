@@ -2,6 +2,8 @@
 
 soma(1, 2);*/
 
+
+
 /*var a = 'a'
 let b: number = 2 
 const c = 'c'*/
@@ -143,42 +145,17 @@ const account: Account = new Account('Elizabeth', 1245)
 console.log(`${adminAccount.deposit()}: R$${adminAccount.balance},00`)
 //console.log(account)*/
 
-abstract class Account{
-    name: string
-    accountNumber: number
-    balance: number = 0
 
-    constructor(name:string, accountNumber: number){ 
-        this.name = name
-        this.accountNumber = accountNumber
-    }
-
-    deposit = () => 'you deposited'
-    withdraw = () => 'you got it'
-    getBalance = () => console.log(this.balance)
-}
 /** Abstract class, não pode criar nenhum objeto, não pode ser instanciada, ela serve de modelo, 
  *  utilizada para defenir valores que serão utilizados em comum em outras classes.
  */
 
-class PeopleAccount extends Account{
-    doc_id: number
 
-    constructor(doc_id: number, name: string, accountNumber: number){
-        super(name, accountNumber)
-        this.doc_id = doc_id
-    }
-}
+import { PeopleAccount } from "./class/PeopleAccount"
+import { CompanyAccount } from "./class/CompanyAccount"
 
-class CompanyAccount extends Account{
-    
-    constructor(name:string, accountNumber: number){
-        super(name,accountNumber)
-    }
-    getLoan = () => {
-        console.log('Você pegou um emprestimo')
-    }
-}
+
+
 
 const companyAccount: CompanyAccount = new CompanyAccount('DIO', 11)
 const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Kevyn', 10)
