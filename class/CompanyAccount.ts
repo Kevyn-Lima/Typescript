@@ -1,4 +1,4 @@
-import { DIOAccount } from "./DioAccount"
+import { DIOAccount } from "./DIOAccount"
 
 export class CompanyAccount extends DIOAccount{
     

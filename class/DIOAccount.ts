@@ -1,6 +1,6 @@
 export abstract class DIOAccount{
     private name: string
-    accountNumber: number
+    readonly accountNumber: number
     balance: number = 0
     private status: boolean = true
 
