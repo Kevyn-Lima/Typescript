@@ -8,8 +8,8 @@ export abstract class DIOAccount{
         this.accountNumber = accountNumber
     }
 
-    deposit = () => 'you deposited'
-    withdraw = () => 'you got it'
-    getBalance = () => console.log(this.balance)
+    deposit = (): void => console.log('you deposited')
+    withdraw = (): void => console.log('you got it')
+    getBalance = (): void => console.log(this.balance)
 }
 

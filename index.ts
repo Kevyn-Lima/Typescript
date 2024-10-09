@@ -160,5 +160,5 @@ import { CompanyAccount } from "./class/CompanyAccount"
 const companyAccount: CompanyAccount = new CompanyAccount('DIO', 11)
 const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Kevyn', 10)
 
-console.log(peopleAccount)
-console.log(companyAccount)
+peopleAccount.deposit();
+console.log(`A empresa depositou ${companyAccount.deposit()}`);
